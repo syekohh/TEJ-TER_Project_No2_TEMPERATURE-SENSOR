@@ -5,7 +5,7 @@
 
 dht DHT;
 
-
+int humidity, temperature;
 
 // Create an LCD object. Parameters: (RS, E, D4, D5, D6, D7):
 LiquidCrystal lcd = LiquidCrystal(2, 3, 4, 5, 6, 7);
@@ -23,14 +23,20 @@ void loop() {
 
   DHT.read11(dht_apin);
 
+  humidity = DHT.humidity;
+  temperature = DHT.temperature;
+
   // Set the cursor on the third column and the first row, counting starts at 0:
   lcd.setCursor(0, 0);
   // Print the string 'Hello World!':
-  lcd.print("H: " + DHT.humidity + " %");
+  lcd.print("Humidity:");
+  lcd.print(humidity);
+  lcd.print("%");
   // Set the cursor on the third column and the second row:
   lcd.setCursor(0, 1);
-  // Print the string 'LCD tutorial':
-  lcd.print("T: " + DHT.temperature + " C");
+  lcd.print("Temperature:");
+  lcd.print(temperature);
+  lcd.print("C");
     
-    delay(5000);//Wait 5 seconds before accessing sensor again.
+    delay(1000);//Wait 5 seconds before accessing sensor again.
 }
