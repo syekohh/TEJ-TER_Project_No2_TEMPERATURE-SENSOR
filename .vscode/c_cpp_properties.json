@@ -1,0 +1,31 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "/Users/harisaljic/Downloads/Arduino.app/Contents/Java/tools/**",
+                "/Users/harisaljic/Documents/Arduino/libraries/**",
+                "/Users/harisaljic/Downloads/Arduino.app/Contents/Java/libraries/**",
+                "/Users/harisaljic/Downloads/Arduino.app/Contents/Java/hardware/tools/**",
+                "/Users/harisaljic/Downloads/Arduino.app/Contents/Java/hardware/arduino/avr/**",
+                "/Users/harisaljic/TEJ-TER_Project_No2_TEMPERATURE-SENSOR/DHT/**"
+            ],
+            "forcedInclude": [
+                "/Users/harisaljic/Downloads/Arduino.app/Contents/Java/hardware/arduino/avr/cores/arduino/Arduino.h",
+                "/Users/harisaljic/TEJ-TER_Project_No2_TEMPERATURE-SENSOR/DHT/dht.h"
+            ],
+            "defines": [
+                "USBCON"
+            ],
+            "macFrameworkPath": [
+                "/System/Library/Frameworks",
+                "/Library/Frameworks"
+            ],
+            "intelliSenseMode": "clang-x64",
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c17",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}
