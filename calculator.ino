@@ -3,6 +3,10 @@
 // Include the library:
 #include "data.h"
 
+dht DHT;
+
+
+
 // Create an LCD object. Parameters: (RS, E, D4, D5, D6, D7):
 LiquidCrystal lcd = LiquidCrystal(2, 3, 4, 5, 6, 7);
 
@@ -16,23 +20,17 @@ void setup() {
 }
 
 void loop() {
-  // Set the cursor on the third column and the first row, counting starts at 0:
-  lcd.setCursor(2, 0);
-  // Print the string 'Hello World!':
-  lcd.print("Hello World!");
-  // Set the cursor on the third column and the second row:
-  lcd.setCursor(2, 1);
-  // Print the string 'LCD tutorial':
-  lcd.print("LCD tutorial");
 
   DHT.read11(dht_apin);
-    
-    Serial.print("Current humidity = ");
-    Serial.print(DHT.humidity);
-    Serial.print("%  ");
-    Serial.print("temperature = ");
-    Serial.print(DHT.temperature); 
-    Serial.println("C  ");
+
+  // Set the cursor on the third column and the first row, counting starts at 0:
+  lcd.setCursor(0, 0);
+  // Print the string 'Hello World!':
+  lcd.print("H: " + DHT.humidity + " %");
+  // Set the cursor on the third column and the second row:
+  lcd.setCursor(0, 1);
+  // Print the string 'LCD tutorial':
+  lcd.print("T: " + DHT.temperature + " C");
     
     delay(5000);//Wait 5 seconds before accessing sensor again.
 }

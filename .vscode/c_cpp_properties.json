@@ -8,7 +8,8 @@
                 "/Users/harisaljic/Downloads/Arduino.app/Contents/Java/libraries/**",
                 "/Users/harisaljic/Downloads/Arduino.app/Contents/Java/hardware/tools/**",
                 "/Users/harisaljic/Downloads/Arduino.app/Contents/Java/hardware/arduino/avr/**",
-                "/Users/harisaljic/TEJ-TER_Project_No2_TEMPERATURE-SENSOR/DHT/**"
+                "/Users/harisaljic/TEJ-TER_Project_No2_TEMPERATURE-SENSOR/DHT/**",
+                "/Users/harisaljic/**"
             ],
             "forcedInclude": [
                 "/Users/harisaljic/Downloads/Arduino.app/Contents/Java/hardware/arduino/avr/cores/arduino/Arduino.h",
