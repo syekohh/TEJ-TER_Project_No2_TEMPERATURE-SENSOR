@@ -39,4 +39,5 @@ void loop() {
   lcd.print("C");
     
     delay(1000);//Wait 5 seconds before accessing sensor again.
+
 }

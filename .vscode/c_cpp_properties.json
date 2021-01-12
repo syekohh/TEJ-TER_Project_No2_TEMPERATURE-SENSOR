@@ -3,27 +3,36 @@
         {
             "name": "Mac",
             "includePath": [
-                "/Users/harisaljic/Downloads/Arduino.app/Contents/Java/tools/**",
+                "/Applications/Arduino.app/Contents/Java/tools/**",
                 "/Users/harisaljic/Documents/Arduino/libraries/**",
-                "/Users/harisaljic/Downloads/Arduino.app/Contents/Java/libraries/**",
-                "/Users/harisaljic/Downloads/Arduino.app/Contents/Java/hardware/tools/**",
-                "/Users/harisaljic/Downloads/Arduino.app/Contents/Java/hardware/arduino/avr/**",
-                "/Users/harisaljic/TEJ-TER_Project_No2_TEMPERATURE-SENSOR/DHT/**",
-                "/Users/harisaljic/**"
+                "/Applications/Arduino.app/Contents/Java/libraries/**",
+                "/Applications/Arduino.app/Contents/Java/hardware/tools/**",
+                "/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/**"
             ],
             "forcedInclude": [
-                "/Users/harisaljic/Downloads/Arduino.app/Contents/Java/hardware/arduino/avr/cores/arduino/Arduino.h",
+                "/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/cores/arduino/Arduino.h",
                 "/Users/harisaljic/TEJ-TER_Project_No2_TEMPERATURE-SENSOR/DHT/dht.h"
             ],
             "defines": [
-                "USBCON"
+                "__CC_ARM",
+                "F_CPU=48000000L",
+                "ARDUINO=10607",
+                "ARDUINO_SAMD_MKRWAN1300",
+                "ARDUINO_ARCH_SAMD",
+                "USE_ARDUINO_MKR_PIN_LAYOUT",
+                "__SAMD21G18A__",
+                "USB_VID=0x2341",
+                "USB_PID=0x8053",
+                "USBCON",
+                "USE_BQ24195L_PMIC",
+                "VERY_LOW_POWER"
             ],
             "macFrameworkPath": [
                 "/System/Library/Frameworks",
                 "/Library/Frameworks"
             ],
             "intelliSenseMode": "clang-x64",
-            "compilerPath": "/usr/bin/clang",
+            "compilerPath": "/usr/bin/clang", 
             "cStandard": "c17",
             "cppStandard": "c++17"
         }
