@@ -15,4 +15,7 @@
 #define D7 7
 
 // define the temperature that is "too hot" and will set off the beeper
-#define TOO_HOT 27
+#define TOO_HOT 37
+
+extern String message = " Go and open a window or door! Let's decrease this temperature!";
+#define msgLength message.length()

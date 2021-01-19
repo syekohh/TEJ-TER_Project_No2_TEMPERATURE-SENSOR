@@ -10,6 +10,9 @@ dht DHT;
 */
 int humidity = 0, temperature = 0;
 
+int end = 0;
+String displayMessage = "";
+
 // create an LCD object
 LiquidCrystal lcd = LiquidCrystal(RS, E, D4, D5, D6, D7);
 
@@ -23,7 +26,8 @@ void setup()
   // specify the LCD's number of columns and rows
   lcd.begin(16, 2);
   // run the boot sequence
-  bootSequence();
+  //bootSequence();
+  delay(1500);
 }
 
 void loop()
@@ -41,30 +45,56 @@ void loop()
   // print the humidity values (as a percent (%))
   lcd.print("Humidity:");
   lcd.print(humidity);
+  Serial.println(humidity);
   lcd.print("%");
   // set the cursor on the third column and the second row:
   lcd.setCursor(0, 1);
   // print the temperature values (in terms of degrees (C))
   lcd.print("Temperature:");
   lcd.print(temperature);
+  Serial.println(temperature);
   lcd.print("C");
 
   // temperature is too hot (27 degrees+) set off the beeper
   if (temperature >= TOO_HOT)
   {
-    digitalWrite(buzzPin, HIGH);
-    delay(150);
-    digitalWrite(buzzPin, LOW);
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("It's getting hot");
+    for (int start = 1; start < msgLength; start++)
+    {
+      lcd.setCursor(0, 1);
+      end = start + 15;
+
+      if (end >= (msgLength - 1))
+      {
+        end = msgLength - 1;
+        displayMessage = message.substring(start, end);
+      }
+
+      displayMessage = message.substring(start, end);
+
+      lcd.print(displayMessage);
+      delay(650);
+      /*
+      for (int i = 0; i < 3; i++)
+      {
+        digitalWrite(buzzPin, HIGH);
+        delay(30);
+        digitalWrite(buzzPin, LOW);
+      }
+      */
+    }
   }
   // if the temperature is regulated, keep the beeper off
   else
   {
+    lcd.clear();
     digitalWrite(buzzPin, LOW);
   }
 
   //Wait 1 seconds before accessing sensor again.
-  delay(1000); 
-
+  delay(1000);
 }
 /*
 * a set of beeps (3) totalling 1.95 seconds to

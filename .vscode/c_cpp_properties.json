@@ -7,7 +7,9 @@
                 "/Users/harisaljic/Documents/Arduino/libraries/**",
                 "/Applications/Arduino.app/Contents/Java/libraries/**",
                 "/Applications/Arduino.app/Contents/Java/hardware/tools/**",
-                "/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/**"
+                "/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/**",
+                "/Applications/Arduino.app/Contents/Java/libraries/LiquidCrystal/src",
+                "/Users/harisaljic/Documents/Arduino/libraries/DHT"
             ],
             "forcedInclude": [
                 "/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/cores/arduino/Arduino.h"
@@ -31,7 +33,7 @@
                 "/Library/Frameworks"
             ],
             "intelliSenseMode": "clang-x64",
-            "compilerPath": "/usr/bin/clang", 
+            "compilerPath": "/usr/bin/clang",
             "cStandard": "c17",
             "cppStandard": "c++17"
         }
