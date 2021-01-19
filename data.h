@@ -15,7 +15,11 @@
 #define D7 7
 
 // define the temperature that is "too hot" and will set off the beeper
-#define TOO_HOT 37
+#define TOO_HOT 27
 
-extern String message = " Go and open a window or door! Let's decrease this temperature!";
+// empty String used for providing a readable message on scroll view
+extern String emptyToAdd = "                ";
+// store the message that is going oto be printed to the display
+extern String message = " Open a window or door! Decrease this temp!" + emptyToAdd;
+// define the length of the String in terms of an "int" variable
 #define msgLength message.length()
